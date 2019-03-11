@@ -1,6 +1,6 @@
 from django import forms
 
-from localflavor.gb.forms import GBPostcodeField
+from localflavor.us.forms import USZipCodeField
 
 from core.helpers import geocode
 from leaflets.models import Leaflet
@@ -24,7 +24,7 @@ class InsidePageImageForm(ImageForm):
 
 
 class PostcodeForm(forms.Form):
-    postcode = GBPostcodeField(error_messages={'required': 'Please enter a valid UK postcode'})
+    postcode = USZipCodeField(error_messages={'required': 'Please enter a valid UK postcode'})
     wgs84_lon = forms.CharField(
         required=False, max_length=100, widget=forms.HiddenInput())
     wgs84_lat = forms.CharField(
