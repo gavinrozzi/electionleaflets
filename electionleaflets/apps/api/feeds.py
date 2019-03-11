@@ -11,7 +11,7 @@ from categories.models import Category
 
 
 class LatestLeafletsFeed(Feed):
-    title = "electionleaflets.org latest items"
+    title = "CampaignMailers.us latest items"
     link = "/leaflets/"
     description = "The most recently uploaded leaflets"
 
@@ -49,7 +49,7 @@ class LatestLeafletsFeed(Feed):
             return im_type
 
 # class PartyFeed(Feed):
-#     title = "electionleaflets.org latest party leaflets"
+#     title = "CampaignMailers.us latest party leaflets"
 #     description = "The most recently uploaded party leaflets"
 #
 #     def get_object(self, request, party_slug):
